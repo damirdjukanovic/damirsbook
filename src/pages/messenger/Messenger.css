@@ -123,6 +123,8 @@
   .chatSubmitButton {
     width: 60px;
     height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 0.8em;
   }
 
@@ -134,10 +136,4 @@
   .noConversationText div {
     display: inline !important;
 }
-}
-@media screen and (max-width: 576px) {
-  .chatSubmitButton {
-  
-    font-size: 0.8em;
-  }
 }
