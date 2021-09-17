@@ -1,0 +1,6 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  padding-top: 64px;
+  font-family: 'Poppins', sans-serif !important;
+}

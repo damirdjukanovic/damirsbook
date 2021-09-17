@@ -1,0 +1,37 @@
+.Popup {
+  width: 200px;
+  height: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  font-size: 0.7em !important;
+}
+
+
+.popup-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.popup-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-h5 {
+  font-size: 13px;
+}
+

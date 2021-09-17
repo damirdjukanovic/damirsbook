@@ -1,0 +1,289 @@
+.navbar-container{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1877f2;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.navbar-left {
+  flex: 3;
+}
+
+.navbar-center{
+  flex: 5;
+}
+.nav-menu-btn {
+  display: none !important;
+}
+
+.logo span {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  font-size: 10px;
+  height: 30px;
+  background-color: white;
+}
+
+.search-icon {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.navbar-right {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-link-item {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar-icon-item {
+  margin-left: 30px;
+  position: relative;
+  font-size: 12px;
+}
+.search-input {
+  width: 80%;
+  border: none;
+
+  font-size: 12px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.navbar-profile-picture {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification-name {
+  
+  font-weight: 500;
+}
+
+.notifications{
+  width: 110%;
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  overflow: hidden;
+}
+
+.navbar-followings a{
+  color: inherit !important;
+}
+
+.navbar-onlinefriends {
+  margin-top: 30px;
+
+}
+
+.navbar-onlinefriends a {
+  color: inherit !important;
+}
+
+.notifications-wrapper {
+  width: 100%;
+  padding: 5px;
+  overflow-y: scroll;
+  max-height: 236px;
+}
+
+.notification {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 13px;
+}
+
+.notification p {
+  margin-block-end: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.created-at {
+  color: darkgray;
+  font-size: 0.8em;
+}
+
+.no-notifications {
+  color: black; 
+  text-align: center;
+}
+
+
+.navbar-icon-bagde {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.left-sidebar-online-friends-text {
+  margin-top: 50px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.logout {
+  margin: auto 20px;
+  cursor: pointer;
+}
+
+.search-results {
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+}
+
+.search-results a {
+  color: black !important
+}
+
+.search-results a:hover{
+  text-decoration: none !important;
+}
+
+.search-results-wrapper {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-results-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-results-user:hover {
+  background-color: rgb(245, 243, 243);
+}
+
+
+.search-results-user span{
+  margin-left: 9px;
+}
+
+@media (min-width: 713) and (max-width: 787px) {
+  .navbar-link {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-link {
+    display: none;
+  }
+  .logo span {
+    margin-left: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+  }
+  .nav-menu-btn {
+    display: block !important;
+  }
+
+  .search {
+    border: none;
+    border-radius: 15px;
+    font-size: 7px;
+    height: 28px;
+    margin-left: 15px;
+  }
+  .navbar-profile-picture {
+    display: none;
+  }
+  .navbar-icon-bagde {
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .navbar-icon-item {
+    margin-left: 24px;
+    position: relative;
+    font-size: 10px;
+  }
+
+  .logout {
+    display: none;
+  }
+  .search-results-wrapper{
+    font-size: 0.8em;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 670px){
+.makeStyles-search-12 {
+    margin-left: 0px !important;
+    
+}
+}

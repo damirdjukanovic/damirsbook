@@ -1,0 +1,33 @@
+.online-friend {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.online-friend-img-container {
+  position: relative;
+  margin-right: 15px;
+}
+
+.online-friend-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.online-activity {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border: 2px solid white;
+}
+
+.online-friend-name {
+  font-weight: 500;
+}

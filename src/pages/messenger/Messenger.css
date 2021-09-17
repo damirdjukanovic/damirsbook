@@ -1,0 +1,144 @@
+.messenger {
+  height: 100vh;
+  display: flex;
+  padding-top: 50px;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.chatMenu {
+  flex: 3.5;
+}
+
+.chatMenuInput {
+  width: 90%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.chatBox {
+  flex: 5.5;
+}
+
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.chatMenuWrapper h6 {
+  margin-top: 20px;
+}
+
+.chatBoxTop {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+.chatBoxBottom {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatMessageInput {
+  width: 80%;
+  height: 90px;
+  padding: 10px;
+}
+
+.chatSubmitButton {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+}
+
+.chatOnline {
+  flex: 3;
+}
+
+.noConversationText svg {
+  color: black;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.noConversationText div {
+  display: none !important;
+  margin-left: 35px;
+} 
+
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  padding: 10px;
+  height: 100%;
+}
+
+.noConversationText {
+  position: absolute;
+  top: 10%;
+  font-size: 50px;
+  color: rgb(224, 220, 220);
+  cursor: default;
+}
+
+
+.chat-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.chat-button-container svg{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .chatMenu {
+    display: none;
+  }
+
+  .chatMenuInput {
+    display: none;
+  }
+
+  .chatBox{
+    flex: 10;
+  }
+
+  .chatOnline{
+    display: none;
+  }
+
+  .chatSubmitButton {
+    width: 60px;
+    height: 30px;
+    font-size: 0.8em;
+  }
+
+  .chat-button-container svg{
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .noConversationText div {
+    display: inline !important;
+}
+}
+@media screen and (max-width: 576px) {
+  .chatSubmitButton {
+    width: 50px;
+    height: 25px;
+    font-size: 0.8em;
+  }
+}

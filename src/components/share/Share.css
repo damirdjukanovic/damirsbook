@@ -1,0 +1,138 @@
+.share {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin-bottom: 70px;
+}
+
+.share-wrapper {
+  padding: 10px;
+  position: relative;
+}
+
+.share-top {
+  display: flex;
+  align-items: center;
+}
+
+.share-top input {
+  width: 80%;
+  border: none;
+  text-decoration: none;
+}
+
+.share-top input:focus {
+  outline: none;
+}
+
+.share-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+aside.emoji-picker-react{
+  position: absolute !important;
+  top: 150px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.emojiItem{
+  position: relative;
+}
+
+.share-profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.share-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.share-item span {
+  margin-left: 5px;
+}
+
+.share hr {
+    margin: 20px;
+  
+}
+
+.share-item-icons, .share-item-text {
+  cursor: pointer;
+}
+
+.share-bottom button {
+  border: none;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: rgb(18, 184, 32);
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+.share-img-container {
+  padding: 0 20px 10px 20px;
+  position: relative;
+}
+
+.share-img-cancel {
+  position: absolute;
+  top: 2px;
+  right: 22px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.share-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 512px) {
+  .share-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  #text::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  #text {
+    font-size: 14px;
+  }
+  .MuiSvgIcon-root {
+    font-size: 1.3rem !important;
+  }
+  .share-item span {
+    margin-left: 0px;
+  }
+  .share-bottom button {
+    font-size: 0.7em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+  }
+}
+
+@media (max-width: 475px) {
+
+  .share-item-text {
+    font-size: 0.8em
+  }
+}

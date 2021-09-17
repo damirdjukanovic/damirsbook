@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import store from "./store";
+import {loadUser} from "./actions/authActions";
+import Main from "./Main";
+import { Provider } from 'react-redux';
+import ReduxToastr from 'react-redux-toastr'
 
-function App() {
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+
+export default function App() {
+
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Provider store={store}>
+      <Router>
+          <Main />
+          <ReduxToastr
+          timeOut={4000}
+          newestOnTop={false}
+          preventDuplicates
+          position="bottom-right"
+          getState={(state) => state.toastr}
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          closeOnToastrClick/>
+      </Router>
+    </Provider>  
+  )
 
-export default App;
+  }

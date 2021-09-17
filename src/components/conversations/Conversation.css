@@ -1,0 +1,69 @@
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  position: relative;
+}
+
+.conversation:hover {
+  background-color: rgb(245, 243, 243);
+}
+
+.isActive {
+  background-color: rgb(245, 243, 243);
+}
+
+.conversation-mobile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.conversation-mobile:hover {
+  background-color: rgb(245, 243, 243);
+}
+
+.conversationImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.conversationName {
+  font-weight: 500;
+}
+
+.conversationName-mobile {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.unread-message {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .conversation {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .conversationImg {
+    margin-right: 0px;
+  }
+
+
+}

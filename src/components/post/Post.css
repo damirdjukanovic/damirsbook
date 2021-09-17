@@ -1,0 +1,109 @@
+.post {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+}
+
+.post-wrapper {
+  padding: 15px;
+  position: relative;
+}
+
+.post hr {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.post-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.like {
+  width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.post-user-name {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.post-profile-picture {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-date {
+  font-size: 11px;
+}
+
+.post-picture {
+  margin-top: 15px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.post-center {
+  margin-bottom: 20px;
+}
+
+.post-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.post-bottom-left-numberOfLikes {
+  font-size: 15px;
+}
+
+.post-bottom-right {
+  margin-left: auto;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.handle-comment-click {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .post-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .post-date{
+    margin-left: 10px;
+  }
+  .delete-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .post-description{
+    font-size: 0.9em;
+  }
+  .post-bottom-left-numberOfLikes{
+    font-size: 0.8em;
+  }
+  .post-bottom-comments{
+    font-size: 0.8em;
+  }
+  .like{
+    margin-right: 5px;
+  }
+}

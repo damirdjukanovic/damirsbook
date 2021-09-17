@@ -1,0 +1,105 @@
+.right-sidebar {
+  flex: 3.5;
+}
+
+.right-sidebar-wrapper {
+  padding: 20px;
+}
+
+.right-sidebar-ad {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.right-sidebar-ad img {
+  height: 300px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.right-sidebar hr {
+  margin: 10px;
+}
+
+.right-sidebar-onlinefriends span {
+  font-weight: 600;
+
+}
+
+.ProfileRightSidebar {
+  flex: 3.5;
+}
+
+.prof-info{
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 19px;
+  margin-right: 15px;
+}
+
+.info-bolded {
+  color: gray;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.profile-rightsidebar-top svg {
+  cursor: pointer;
+} 
+
+.right-sidebar-onlinefriends a, .profile-rightsidebar-bottom a {
+  text-decoration: none;
+  color: inherit;
+}
+.right-sidebar-onlinefriends a:hover, .profile-rightsidebar-bottom a:hover {
+  color: black;
+}
+
+.profile-rightsidebar-top p {
+  margin-top: 10px;
+}
+
+.profile-right-top {
+  margin-bottom: 25px;
+}
+
+.profile-rightsidebar-bottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content:start;
+  flex-wrap: wrap;
+}
+
+.profile-sidebar-friend {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-friend-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.profile-sidebar-friend span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 753px) {
+  .ProfileRightSidebar {
+    display: none;
+  }
+}

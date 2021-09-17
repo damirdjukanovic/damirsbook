@@ -1,0 +1,9 @@
+.msg-drawer-hr {
+  margin: 10px;
+}
+
+.msg-drawer-top h6, .msg-drawer-bottom h6 {
+  text-align: center;
+  margin-top: 15px !important;
+
+}
