@@ -165,7 +165,7 @@ import {useParams} from "react-router";
                     value={newMessage}
                   ></textarea>
                   <div className="chat-button-container">
-                    <button className="chatSubmitButton" type="submit"  disabled={newMessage.length === 0} onClick={handleSubmit}>
+                    <button className="chatSubmitButton" type="submit"  disabled={newMessage === ""} onClick={handleSubmit}>
                       Send
                     </button>
                     <MessengerDrawer 
