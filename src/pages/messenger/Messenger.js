@@ -110,7 +110,7 @@ import {useParams} from "react-router";
     });
 
     try {
-      const res = await axios.post("/messages", message);
+      const res = await axios.post("https://damirsbook.herokuapp.com/api/messages", message);
       setMessages([...messages, res.data]);
       setNewMessage("");
 
