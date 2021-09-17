@@ -187,7 +187,7 @@ const Profile = (props) => {
             </form>  
               <form onSubmit={handleSubmit}>
                 <label htmlFor="profileFile">
-                  <img className={currentUser._id === user._id ? "profile-img pointer" : "profile-img"}  src={profilePhoto ? profilePhoto : user.profilePicture} alt="profilePic" />
+                  <img className={currentUser._id === user._id ? "profile-img pointer" : "profile-img"}  src={(currentUser._id === user._id) && profilePhoto ? profilePhoto : user.profilePicture} alt="profilePic" />
                     {(currentUser._id === user._id) && 
                       <input
                       style={{ display: "none" }}
