@@ -58,7 +58,8 @@
   cursor: pointer;
   background-color: teal;
   color: white;
-  -webkit-appearance: none;
+  -webkit-appearance: none !important;
+  text-align: center !important;
 
 }
 

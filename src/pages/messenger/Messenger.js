@@ -102,7 +102,7 @@ import {useParams} from "react-router";
     );
 
 
-    
+    if(newMessage.length > 0) {
     socket.emit("sendMessage", {
       senderId: user._id,
       receiverId,
@@ -118,6 +118,7 @@ import {useParams} from "react-router";
     } catch (err) {
       console.log(err);
     }
+  }
   };
 
   useEffect(() => {
