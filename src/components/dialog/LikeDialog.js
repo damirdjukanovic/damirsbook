@@ -48,7 +48,7 @@ export default function LikeDialog({post, numOfLikes, handleLike}) {
 
   useEffect(() => {
     const fetchPostsLikes = async () => {
-      const res = await axios.get(`/posts/${post._id}/likes`);
+      const res = await axios.get(`https://damirsbook.herokuapp.com/api/posts/${post._id}/likes`);
       setUsers(res.data);
     }
     fetchPostsLikes();
