@@ -22,7 +22,7 @@ export default function LeftSidebar({user, randomCounter}) {
 
   useEffect(() => {
     const fetchFollowings = async() => {
-      const res = await axios.get("/users/followings/" + user._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followings/" + user._id);
       setFollowings(res.data);
       
     }

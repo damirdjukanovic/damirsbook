@@ -29,7 +29,7 @@ import {useParams} from "react-router";
 
   useEffect(() => {
     if (id){
-      axios.get(`/conversations/find/${user._id}/${id}`)
+      axios.get(`https://damirsbook.herokuapp.com/api/conversations/find/${user._id}/${id}`)
         .then(res => setCurrentChat(res.data))
         .catch(err => console.log(err));
     }
@@ -80,7 +80,7 @@ import {useParams} from "react-router";
   useEffect(() => {
     const getMessages = async () => {
       try {
-        const res = await axios.get("/messages/" + currentChat?._id);
+        const res = await axios.get("https://damirsbook.herokuapp.com/api/messages/" + currentChat?._id);
         setMessages(res.data);
       } catch (err) {
         console.log(err);
@@ -110,7 +110,7 @@ import {useParams} from "react-router";
     });
 
     try {
-      const res = await axios.post("/messages", message);
+      const res = await axios.post("https://damirsbook.herokuapp.com/api/messages", message);
       setMessages([...messages, res.data]);
       setNewMessage("");
 

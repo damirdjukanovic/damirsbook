@@ -11,7 +11,7 @@ const ChatOnline = ({ onlineUsers, currentId, setCurrentChat, isMobile, usersOnl
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("/users/followers/" + currentId);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followers/" + currentId);
       setFriends(res.data);
     };
 
@@ -26,7 +26,7 @@ const ChatOnline = ({ onlineUsers, currentId, setCurrentChat, isMobile, usersOnl
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `/conversations/find/${currentId}/${user._id}`
+        `https://damirsbook.herokuapp.com/api/conversations/find/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (err) {

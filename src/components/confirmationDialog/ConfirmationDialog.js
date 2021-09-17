@@ -25,14 +25,14 @@ export default function ConfirmationDialog(props) {
       }
     }
     const body = JSON.stringify({userId: props.currentUser._id})
-    await axios.put(`/comments/delete/${props.comment._id}`, body, config);
+    await axios.put(`https://damirsbook.herokuapp.com/api/comments/delete/${props.comment._id}`, body, config);
     props.handleCommentsLengthMinus();
     handleClose();
     props.handleCommentCounter();
   }
 
   const handleDeletePost = async() => {
-    await axios.delete("/posts/" + props.post._id);
+    await axios.delete("https://damirsbook.herokuapp.com/api/posts/" + props.post._id);
     handleClose();
     props.handleRandomCounter();
   }

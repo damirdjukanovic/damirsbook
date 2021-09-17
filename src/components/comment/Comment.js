@@ -38,7 +38,7 @@ const Comments = (props) => {
 
   useEffect(() => {
     const fetchComments = async () => {
-      const res = await axios.get("/comments/" + post._id)
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/comments/" + post._id)
       setComments(res.data.sort((p1, p2) => {
         return new Date(p1.createdAt) - new Date(p2.createdAt);
       }));
@@ -48,7 +48,7 @@ const Comments = (props) => {
 
   useEffect(() => {
     const fetchCurrentUser = async () => {
-      const res = await axios.get("/users/?userId=" + props.user._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/?userId=" + props.user._id);
       setCurrentUser(res.data);
     };
     fetchCurrentUser();
@@ -70,7 +70,7 @@ const Comments = (props) => {
       username: currentUser.username,
       desc: desc
     }
-    await axios.post("/comments/", body, config);
+    await axios.post("https://damirsbook.herokuapp.com/api/comments/", body, config);
     setDesc("");
 
     props.handleCommentsLength();

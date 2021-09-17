@@ -14,7 +14,7 @@ export default function ProfileRightSidebar({user, currentUser, handleRandomCoun
 
   useEffect(() => {
     const fetchFollowers = async () => {
-      const res = await axios.get("/users/followers/" + user._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followers/" + user._id);
       setFollowers(res.data);
     }
     fetchFollowers();

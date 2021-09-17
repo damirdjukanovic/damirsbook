@@ -199,7 +199,7 @@ const PrimarySearchAppBar = (props) => {
 
   useEffect(() => {
     const fetchFollowings = async() => {
-      const res = await axios.get("/users/followings/" + props.user?._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followings/" + props.user?._id);
       setFollowings(res.data);
       
     }
@@ -208,7 +208,7 @@ const PrimarySearchAppBar = (props) => {
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("/users/followers/" + props.user?._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followers/" + props.user?._id);
       setFriends(res.data);
     };
 
@@ -221,7 +221,7 @@ const PrimarySearchAppBar = (props) => {
 
   useEffect(() => {
     const fetchNotifications = async() => {
-      const res = await axios.get("/users/notifications/" + props.user?._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/notifications/" + props.user?._id);
       setNotifications(res.data);
     };
     fetchNotifications();
@@ -283,7 +283,7 @@ const PrimarySearchAppBar = (props) => {
   }
 
   const handleChange = async(e) => {
-    const res = await axios.get(`/users/search?query=${e.target.value}`);
+    const res = await axios.get(`https://damirsbook.herokuapp.com/api/users/search?query=${e.target.value}`);
     setSearchUsers(res.data);
     return;
   }

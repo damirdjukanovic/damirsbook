@@ -70,7 +70,7 @@ export default function EditPopup({currentUser, setAge1, setFrom1, setRelationsh
     }
 
     try {
-      await axios.put(`/users/${currentUser._id}`, body)
+      await axios.put(`https://damirsbook.herokuapp.com/api/users/${currentUser._id}`, body)
     } catch(err) {
       console.log(err);
     }

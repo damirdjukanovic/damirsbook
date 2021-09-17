@@ -7,7 +7,7 @@ export default function Message({ message, own, friend }) {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    axios.get("/users/?userId=" + friend)
+    axios.get("https://damirsbook.herokuapp.com/api/users/?userId=" + friend)
       .then(res => setUser(res.data))
       .catch(err => err.message);
   }, [friend])

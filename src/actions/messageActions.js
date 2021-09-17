@@ -12,10 +12,10 @@ export const updateMsg = (messageId, body) => (dispatch) => {
 }
 
 export const validateRead = (userId) => (dispatch) => {
-  axios.get("/conversations/" + userId)
+  axios.get("https://damirsbook.herokuapp.com/api/conversations/" + userId)
     .then(res => {
       for(let c of res.data){
-        axios.get(`/messages/${c._id}/unread`)
+        axios.get(`https://damirsbook.herokuapp.com/api/messages/${c._id}/unread`)
         .then(res2 => {
           dispatch({
             type: VALIDATE_READ,
@@ -58,7 +58,7 @@ export const getMessages = (userId) => (dispatch) => {
     .then(res => {
       for(let c of res.data){
         console.log("convo: ", res.data);
-        axios.get("/messages/" + c._id)
+        axios.get("https://damirsbook.herokuapp.com/api/messages/" + c._id)
         .then(res2 => {
           dispatch({
             type: GET_MESSAGES,

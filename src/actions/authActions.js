@@ -33,7 +33,7 @@ export const register = ({username, email, fullname, password}) => (dispatch) =>
   const parsedBody = JSON.stringify({username, email, fullname,password});
 
 
-  axios.post("/auth/register", parsedBody, config)
+  axios.post("https://damirsbook.herokuapp.com/api/auth/register", parsedBody, config)
     .then(res => {
       dispatch({
         type: REGISTER_SUCCESS,

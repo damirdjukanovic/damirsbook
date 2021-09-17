@@ -60,7 +60,7 @@ const Profile = (props) => {
     const fetchUser = async () => {
       try {
         sethasError(false);
-        const res = await axios.get(`/users/?username=${username}`);
+        const res = await axios.get(`https://damirsbook.herokuapp.com/api/users/?username=${username}`);
         setUser(res.data);
       } catch (err) {
         sethasError(true)
@@ -72,7 +72,7 @@ const Profile = (props) => {
 
   useEffect(() => {
     const fetchCurrentUser = async() => {
-      const res = await axios.get("/users/?username=" + props.user.username);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/?username=" + props.user.username);
       setCurrentUser(res.data);
     }
     fetchCurrentUser();
@@ -136,7 +136,7 @@ const Profile = (props) => {
       
             uploadTask.snapshot.ref.getDownloadURL().then((url) =>{
               body.coverPicture = url
-                axios.put(`/users/${user._id}`, body)
+                axios.put(`https://damirsbook.herokuapp.com/api/users/${user._id}`, body)
                 .then(res => {
                   setCoverFile(null);
                   setCoverPhoto(url);
@@ -151,10 +151,10 @@ const Profile = (props) => {
   }
 
   const handleChat = async() => {
-    const res = await axios.get(`/conversations/find/${currentUser._id}/${user._id}`);
+    const res = await axios.get(`https://damirsbook.herokuapp.com/api/conversations/find/${currentUser._id}/${user._id}`);
     const exists = res.data;
     if(!exists) {
-      await axios.post("/conversations/", {
+      await axios.post("https://damirsbook.herokuapp.com/api/conversations/", {
         senderId: currentUser._id,
         receiverId: user._id
       });

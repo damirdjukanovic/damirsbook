@@ -54,7 +54,7 @@ export default function Share(props) {
         
               uploadTask.snapshot.ref.getDownloadURL().then((url) =>{
                 newPost.img = url
-                axios.post("/posts/", newPost)
+                axios.post("https://damirsbook.herokuapp.com/api/posts/", newPost)
                   .then(res => {
                     console.log(res.data);
                     props.increasePosts();
@@ -67,7 +67,7 @@ export default function Share(props) {
          )
         } else if (desc.length > 0) {
 
-        const postic = await axios.post("/posts/", newPost);
+        const postic = await axios.post("https://damirsbook.herokuapp.com/api/posts/", newPost);
         props.increasePosts();
         setDesc("");
         setFile(null);

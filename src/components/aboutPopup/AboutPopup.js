@@ -9,7 +9,7 @@ export default function Popup(props) {
   const [followers, setFollowers] = useState([])
   useEffect(() => {
     const fetchFollowers = async () => {
-      const res = await axios.get("/users/followers/" + props.user._id);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followers/" + props.user._id);
       setFollowers(res.data);
     }
     fetchFollowers();

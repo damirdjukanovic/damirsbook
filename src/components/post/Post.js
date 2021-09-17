@@ -29,7 +29,7 @@ export default function Post({post, user: currentUser, handleRandomCounter}) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users/?userId=${post.userId}`);
+      const res = await axios.get(`https://damirsbook.herokuapp.com/api/users/?userId=${post.userId}`);
       setUser(res.data);
     }
     fetchUser();
@@ -63,7 +63,7 @@ export default function Post({post, user: currentUser, handleRandomCounter}) {
 
     const body = JSON.stringify({userId: currentUser._id});
 
-    await axios.put(`/posts/${post._id}/like`, body, config);
+    await axios.put(`https://damirsbook.herokuapp.com/api/posts/${post._id}/like`, body, config);
 
     setNumOfLikes(post.likes.length);
     

@@ -13,8 +13,8 @@ export default function FollowButton(props) {
 
     if(isFollowed) {
       try {
-        await axios.put(`/users/${props.user._id}/unfollow`, body);
-        await axios.put(`/users/notifications/${props.user._id}/delete`,{senderId: props.currentUser._id})
+        await axios.put(`https://damirsbook.herokuapp.com/api/users/${props.user._id}/unfollow`, body);
+        await axios.put(`https://damirsbook.herokuapp.com/api/users/notifications/${props.user._id}/delete`,{senderId: props.currentUser._id})
       } catch(err) {
         console.log(err)
       }
@@ -23,8 +23,8 @@ export default function FollowButton(props) {
       props.handleRandomCounter();
     } else {
       try {
-        await axios.put(`/users/${props.user._id}/follow`, body);
-        await axios.post(`/users/notifications/${props.user._id}`, {
+        await axios.put(`https://damirsbook.herokuapp.com/api/users/${props.user._id}/follow`, body);
+        await axios.post(`https://damirsbook.herokuapp.com/api/users/notifications/${props.user._id}`, {
           fullname: props.currentUser.fullname,
           createdAt: Date.now(),
           username: props.currentUser.username,

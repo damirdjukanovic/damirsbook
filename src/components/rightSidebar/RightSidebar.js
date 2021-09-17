@@ -13,7 +13,7 @@ const RightSidebar = (props) => {
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("/users/followers/" + props.currentId);
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/followers/" + props.currentId);
       setFriends(res.data);
     };
 

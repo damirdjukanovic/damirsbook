@@ -22,7 +22,7 @@ const Home = (props) => {
   useEffect(() => {
     
     const fetchUser = async() => {
-      const user = await axios.get("/users/?userId=" + props.user?._id);
+      const user = await axios.get("https://damirsbook.herokuapp.com/api/users/?userId=" + props.user?._id);
       setUser(user.data);
     }
     if(props.user) {
