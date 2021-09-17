@@ -59,7 +59,7 @@ export const login = ({username, password}) => (dispatch, getState) => {
     }
   }
 
-  axios.post("/auth/login", body, config)
+  axios.post("https://damirsbook.herokuapp.com/api/auth/login", body, config)
     .then(res => {
       dispatch({
         type: LOGIN_SUCCESS,
