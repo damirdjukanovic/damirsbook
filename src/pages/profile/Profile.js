@@ -111,7 +111,7 @@ const Profile = (props) => {
       
             uploadTask.snapshot.ref.getDownloadURL().then((url) =>{
               body.profilePicture = url
-                axios.put(`/users/${user._id}`, body)
+                axios.put(`https://damirsbook.herokuapp.com/api/users/${user._id}`, body)
                 .then(res => {
                   setProfileFile(null);
                   setProfilePhoto(url)
