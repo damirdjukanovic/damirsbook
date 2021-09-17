@@ -68,7 +68,7 @@ import {useParams} from "react-router";
   useEffect(() => {
     const getConversations = async () => {
       try {
-        const res = await axios.get("/conversations/" + user._id);
+        const res = await axios.get("https://damirsbook.herokuapp.com/api/messages/conversations/" + user._id);
         setConversations(res.data);
       } catch (err) {
         console.log(err);
