@@ -193,7 +193,6 @@ const Profile = (props) => {
                       style={{ display: "none" }}
                       type="file"
                       id="profileFile"
-                      accept=".png,.jpeg,.jpg"
                       onChange={(e) => setProfileFile(e.target.files[0])}
                       />
                     }
