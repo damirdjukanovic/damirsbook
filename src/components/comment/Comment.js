@@ -8,11 +8,21 @@ import ConfirmationDialog from "../confirmationDialog/ConfirmationDialog";
 
 const Comment = ({comment, currentUser, handleCommentCounter, handleCommentsLengthMinus}) => {
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUserPicture = async() => {
+      const res = await axios.get("https://damirsbook.herokuapp.com/api/users/?userId=" + comment.userId);
+      setUser(res.data)
+    }
+    fetchUserPicture();
+  }, [comment.userId])
+
   return (
     <div className="comment">
       <div className="comment-wrapper">
         <div className="comment-picture-container">
-          <img className="comment-picture" src={comment.profilePicture} alt="" />
+          <img className="comment-picture" src={user?.profilePicture} alt="" />
         </div>
         <div className="comment-container">
           <div className="comment-delete-container">

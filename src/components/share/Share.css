@@ -37,6 +37,7 @@ aside.emoji-picker-react{
   top: 150px;
   right: 50%;
   transform: translateX(50%);
+  z-index: 1000 !important;
 }
 
 .emojiItem{

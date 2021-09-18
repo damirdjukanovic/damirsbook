@@ -10,7 +10,7 @@ import store from "./store";
 import {getMessages} from "./actions/messageActions";
 import socket from "./Socket";
 import { LoopCircleLoading } from 'react-loadingg';
-
+import ReduxToastr from 'react-redux-toastr'; 
 
 import {
   Switch,
@@ -50,7 +50,16 @@ const Main = (props) => {
   return (
         <Switch>
         <Route exact path="/home">
-          {isAuthenticated ? <Home onlineUsers={onlineUsers} /> : <LoopCircleLoading />} 
+          {isAuthenticated ? <Home onlineUsers={onlineUsers} /> : <LoopCircleLoading />}
+          <ReduxToastr
+          timeOut={4000}
+          newestOnTop={false}
+          preventDuplicates
+          position="bottom-right"
+          getState={(state) => state.toastr}
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          closeOnToastrClick/> 
          </Route>
          <Route exact path="/">
           {isAuthenticated ? <Redirect to="/home" /> : <Login />}
@@ -59,7 +68,16 @@ const Main = (props) => {
            {isAuthenticated ? <Redirect to="/home" /> : <Register />}
          </Route>
          <Route exact path="/profile/:username">
-         {isAuthenticated ? <Profile user={user} onlineUsers={onlineUsers}/> : <LoopCircleLoading />} 
+         {isAuthenticated ? <Profile user={user} onlineUsers={onlineUsers}/> : <LoopCircleLoading />}
+         <ReduxToastr
+          timeOut={4000}
+          newestOnTop={false}
+          preventDuplicates
+          position="bottom-right"
+          getState={(state) => state.toastr}
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          closeOnToastrClick/>  
          </Route>
          <Route exact path="/messenger">
          {isAuthenticated ? <Messenger onlineUsers={onlineUsers}/> : <LoopCircleLoading />} 

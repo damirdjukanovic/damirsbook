@@ -98,7 +98,6 @@ export default function EditPopup({currentUser, setAge1, setFrom1, setRelationsh
                 onChange={handleChangeAge}
                 input={<Input id="demo-dialog-native" />}
               >
-                <option aria-label="None" value="" />
                 <option value={18}>18</option>
                 <option value={19}>19</option>
                 <option value={20}>20</option>

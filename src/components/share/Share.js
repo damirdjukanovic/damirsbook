@@ -128,10 +128,10 @@ export default function Share(props) {
           </div>
           <div className="share-item emojiItem">
             <div className="share-item-icon">
-            <EmojiEmotions className="share-item-icons" htmlColor="yellow" onClick={handleEmojiOpen}/>
+            <EmojiEmotions className="share-item-icons" htmlColor="orange" onClick={handleEmojiOpen}/>
             </div>
             <span className="share-item-text" onClick={handleEmojiOpen}>
-              Feelings
+              Emojis
             </span>
           </div>
           <button type="submit" className="btn btn-success" disabled={!desc && !file}>Share</button>

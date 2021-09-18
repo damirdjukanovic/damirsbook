@@ -7,7 +7,7 @@ export const loadUser = () => (dispatch, getState) => {
   dispatch({
     type: USER_LOADING
   });
-  axios.get("https://damirsbook.herokuapp.com/auth/getUser", tokenConfig(getState))
+  axios.get("https://damirsbook.herokuapp.com/api/auth/getUser", tokenConfig(getState))
     .then(res => {
       dispatch({
         type: USER_LOADED,
