@@ -190,7 +190,7 @@ const Profile = (props) => {
                   <img className={currentUser._id === user._id ? "profile-img pointer" : "profile-img"}  src={(currentUser._id === user._id && profilePhoto) ? profilePhoto : user.profilePicture} alt="profilePic" />
                     {(currentUser._id === user._id) && 
                       <input
-                      style={{ display: "none" }}
+                      style={{ display: "block" }}
                       type="file"
                       id="profileFile"
                       onChange={(e) => setProfileFile(e.target.files[0])}
