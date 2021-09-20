@@ -25,7 +25,11 @@ const Login = (props) => {
   useEffect(() => {
     if(error.id === "LOGIN_FAIL") {
       setMsg(error.msg.msg);
+    };
+    if(error.id === "REGISTER_FAIL") {
+      setMsg(error.msg.msg);
     }
+
   }, [error])
 
   const onSubmit = (values) => {

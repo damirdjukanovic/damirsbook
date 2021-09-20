@@ -50,7 +50,7 @@ const Main = (props) => {
   return (
         <Switch>
         <Route exact path="/home">
-          {isAuthenticated ? <Home onlineUsers={onlineUsers} /> : <LoopCircleLoading />}
+          {isAuthenticated ? <Home onlineUsers={onlineUsers} /> : <Login />}
           <ReduxToastr
           timeOut={4000}
           newestOnTop={false}
