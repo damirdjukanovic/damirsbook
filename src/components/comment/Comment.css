@@ -71,7 +71,7 @@
 
 .comments-input{
   background-color: transparent;
-  height: 80%;
+  height: 80% !important;
   width: 90%;
   border: none;
   outline: none;
