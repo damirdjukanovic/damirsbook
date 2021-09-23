@@ -78,6 +78,8 @@
   margin-left: 5px;
   font-size:13px;
   z-index: 10000;
+  padding: 0 !important;
+  -webkit-appearance: none;
 }
 
 .send-icon svg {

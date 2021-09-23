@@ -19,7 +19,7 @@ function SimpleDialog(props) {
       <div className="popup-bottom">
         <h5>Liked by:</h5>
         { users && users.length >= 1 ? users.map((u) => {
-            return (
+            return ( 
             <div key={u.fullname} className="online-friend">
             <div className="online-friend-img-container">
               <img className="online-friend-img" src={u.profilePicture} alt="likes" />
